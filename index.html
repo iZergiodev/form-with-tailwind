@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+
+  <body>
+    <div class="flex items-center justify-center lg:h-screen">
+      <div
+        class="lg:bg-state-50 h-full w-full rounded border-black bg-slate-50 lg:h-[73vh] lg:w-[100vh] lg:border-2 lg:from-inherit overflow-y-auto"
+      >
+        <div
+          class="flex h-32 flex-col justify-center bg-cover bg-center bg-no-repeat text-center lg:h-14 lg:justify-end lg:border-b lg:border-black lg:bg-slate-50 lg:text-start"
+        >
+          <h1
+            class="ml-5 text-4xl font-bold text-black lg:mb-3 lg:text-2xl lg:text-black"
+          >
+            Payment for example
+          </h1>
+        </div>
+
+        <div
+          class="mt-4 hidden lg:flex lg:h-14 lg:justify-center lg:text-start"
+        >
+          <h4
+            class="my-auto h-[70%] w-[90%] rounded-lg border-2 border-red-900 bg-red-300 p-1 pl-4 font-bold text-red-900"
+          >
+            Some fields are missing
+          </h4>
+        </div>
+
+        <div class="flex flex-col lg:flex-row lg:justify-evenly">
+          <div class="mt-5 flex flex-col items-center justify-center lg:w-1/2">
+            <label class="mb-3 text-2xl font-semibold">Card #</label>
+            <input
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[90%]"
+              type="tel"
+              pattern="[0-9\s]{13,19}"
+              maxlength="19"
+              placeholder="XXXXXXXXXXXXX"
+              required
+            />
+          </div>
+          <div
+            class="mt-5 flex flex-col items-center justify-center lg:w-[25%]"
+          >
+            <label class="mb-3 text-2xl font-semibold">CVC #</label>
+            <input
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black"
+              type="text"
+              pattern="\d{4}"
+              maxlength="4"
+              placeholder="0000"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+              required
+            />
+          </div>
+          <div
+            class="mt-5 flex flex-col items-center justify-center lg:w-[25%]"
+          >
+            <label class="mb-3 text-2xl font-semibold">Amount</label>
+            <input
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black"
+              type="tel"
+              pattern="[0-9\s]{13,19}"
+              maxlength="19"
+              placeholder="Amount"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:w-full lg:flex-row">
+          <div
+            class="w-100 mt-5 flex flex-col items-center justify-center lg:w-1/2"
+          >
+            <label class="mb-3 text-2xl font-semibold">Nombre</label>
+            <input
+              class="mx-auto h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[90%]"
+              type="text"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div
+            class="w-100 mt-5 flex flex-col items-center justify-center lg:w-1/2"
+          >
+            <label class="mb-3 text-2xl font-semibold">Apellido</label>
+            <input
+              class="mx-auto h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[90%]"
+              type="text"
+              placeholder="Apellido"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:w-full lg:flex-row">
+          <div class="mt-5 flex flex-col items-center justify-center lg:w-1/2">
+            <label class="mb-3 text-2xl font-semibold">City</label>
+            <input
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[90%]"
+              type="text"
+              placeholder="Ciudad"
+              required
+            />
+          </div>
+          <div class="mt-5 flex flex-col items-center justify-center lg:w-1/4">
+            <label class="mb-3 text-2xl font-semibold">State</label>
+            <select
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[80%]"
+              required
+            >
+              <option class="text-black" value="soltero">Soltero</option>
+              <option class="text-black" value="relacion">Relacion</option>
+              <option class="text-black" value="casado">Casado</option>
+            </select>
+          </div>
+          <div class="mt-5 flex flex-col items-center justify-center lg:w-1/4">
+            <label class="mb-3 text-2xl font-semibold">Postal Code</label>
+            <input
+              class="h-10 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[80%]"
+              type="text"
+              pattern="\d{4}"
+              maxlength="4"
+              placeholder="0000"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:w-full lg:flex-row">
+          <div
+            class="w-full mt-5 flex flex-col lg:flex-row lg:gap-10 items-center justify-center lg:w-1/2"
+          >
+          <div class="flex flex-col">
+          <label for="html"><img class="h-28 mb-6 mt-10" src="https://www.mesadvocats.com/blog/wp-content/uploads/PayPal.png" alt="paypal logo"></label>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+          </div>
+          <div class="flex flex-col">
+            <label for="css"><img class="h-28 mt-10 mb-6" width="150px" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt=""></label>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+          </div>
+            
+          </div>
+          <div
+            class="w-100 mt-5 flex flex-col items-center justify-center lg:w-1/2"
+          >
+            <label class="mb-3 text-2xl font-semibold">Message</label>
+            <textarea
+              class="mx-auto h-28 w-1/2 rounded border border-black bg-inherit pl-2 text-black lg:w-[90%] p-1 resize-none"
+              required
+              >
+            </textarea>
+          </div>
+        </div>
+
+        <div class="flex flex-row h-12 mt-10 mb-40 justify-center gap-3 w-full lg:justify-end lg:mb-0">
+          <button class="bg-gray-500 text-white w-40 rounded-lg">Cancel</button>
+          <button type="submit" class="bg-blue-500 text-white w-40 rounded-lg lg:mr-11">Send</button>
+          
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
